@@ -1,15 +1,26 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React from 'react';
+import styled from 'styled-components';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+import Title from '../components/title.compomemt';
+import Text from '../components/text.component';
 
-export default IndexPage
+const IndexPageStyled = styled.section`
+	height: 100vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
+const IndexPage: React.FC = () => {
+	return (
+		<IndexPageStyled>
+			<Title title="Hello Everyone" />
+			<Text text="I'm so happy to see you here! My name is Andre Ferreira" />
+			<Text text="This site is making now 👷🏾‍♂️" />
+		</IndexPageStyled>
+	);
+};
+
+export default IndexPage;
