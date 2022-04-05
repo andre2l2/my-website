@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Head from 'next/head';
 import styled from 'styled-components';
 import packageJson from '../package.json';
 
@@ -13,10 +14,16 @@ const Center = styled.div`
 
 const IndexPage: React.FC = () => {
 	return (
-		<Center>
-			<h1>Site in progress... v{packageJson.version}</h1>
-			<h2>By Andre Ferreira</h2>
-		</Center>
+		<Fragment>
+			<Head>
+				<link rel="icon" href="/images/logo.svg" />
+				<link rel="manifest" href="/manifest.json"></link>
+			</Head>
+			<Center>
+				<h1>Site in progress... v{packageJson.version}</h1>
+				<h2>By Andre Ferreira</h2>
+			</Center>
+		</Fragment>
 	);
 };
 

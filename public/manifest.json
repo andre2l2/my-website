@@ -1,0 +1,15 @@
+{
+	"name": "my-website",
+	"short_name": "MyWebsite",
+	"theme_color": "#2a0044",
+	"background_color": "#2a0044",
+	"display": "standalone",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "images/logo.svg",
+			"sizes": "72x72",
+			"type": "image/svg"
+		}
+	]
+}
