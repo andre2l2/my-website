@@ -22,6 +22,9 @@ const IndexPage: React.FC = () => {
 			<Center>
 				<h1>Site in progress... v{packageJson.version}</h1>
 				<h2>By Andre Ferreira</h2>
+				<a href="https://github.com/andre2l2/my-website" target="_blank">
+					Click here to see Github repository
+				</a>
 			</Center>
 		</Fragment>
 	);
