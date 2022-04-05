@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const P: React.FC = ({ children }) => {
+export const Paragraph: React.FC = ({ children }) => {
 	return <p>{children}</p>;
 };
