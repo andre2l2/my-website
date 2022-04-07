@@ -23,7 +23,10 @@ const IndexPage: React.FC = () => {
 				<link rel="manifest" href="/manifest.json"></link>
 				<meta property="og:title" content="My-Website" />
 				<meta property="og:description" content="" />
-				<meta property="og:image" content="/images/logo.svg"></meta>
+				<meta
+					property="og:image"
+					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
+				></meta>
 			</HeadOf>
 			<Center>
 				<Title type="h1">Site in progress... v{packageJson.version}</Title>
