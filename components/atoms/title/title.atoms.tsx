@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleType } from './title.type';
+import { TitleType } from './type';
 
 export const Title: React.FC<TitleType> = ({ children, type }) => {
 	return type === 'h1' ? (
