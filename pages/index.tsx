@@ -27,6 +27,10 @@ const IndexPage: React.FC = () => {
 					property="og:image"
 					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
 				></meta>
+				<meta
+					property="og:url"
+					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
+				/>
 			</HeadOf>
 			<Center>
 				<Title type="h1">Site in progress... v{packageJson.version}</Title>
