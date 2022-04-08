@@ -5,6 +5,10 @@
 		"email": "delcferreira@gmail.com"
 	},
 	"version": "0.0.8",
+	"engines": {
+		"node": "16",
+		"npm": "8.5.0"
+	},
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
