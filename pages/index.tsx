@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import packageJson from '../package.json';
 
-import { HeadOf } from '../components/atoms/next/head.atom';
-import { Title } from '../components/atoms/title/title.atoms';
-import { Link } from '../components/atoms/link/link.atoms';
+import { Title } from '../components/atoms/html/title/title.atoms';
+import { Link } from '../components/atoms/html/link/link.atoms';
+import { HeadMolecules } from '../components/molecules/head/head.molecules';
 
 const Center = styled.div`
 	height: 100vh;
@@ -18,25 +18,7 @@ const Center = styled.div`
 const IndexPage: React.FC = () => {
 	return (
 		<Fragment>
-			<HeadOf>
-				<link rel="icon" href="/images/logo.svg" />
-				<link rel="manifest" href="/manifest.json" />
-				<meta property="og:title" content="My-Website" />
-				<meta property="og:type" content="video.movie" />
-				<meta property="og:description" content="Hello everyone!" />
-				<meta
-					property="og:image"
-					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
-				/>
-				<meta
-					property="og:url"
-					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
-				/>
-				<meta
-					name="twitter:image"
-					content="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FA%2FA007%2FA007160_Gnu.jpg&f=1&nofb=1"
-				/>
-			</HeadOf>
+			<HeadMolecules />
 			<Center>
 				<Title type="h1">Site in progress... v{packageJson.version}</Title>
 				<Title type="h2">By Andre Ferreira</Title>
