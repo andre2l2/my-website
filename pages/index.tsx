@@ -5,10 +5,10 @@ import packageJson from '../package.json';
 import { Title } from '../components/atoms/html/title/title.atoms';
 import { Link } from '../components/atoms/html/link/link.atoms';
 import { HeadMolecules } from '../components/molecules/head/head.molecules';
+import { HeaderMolecules } from '../components/molecules/header/header.molecules';
 
 const Center = styled.div`
-	height: 100vh;
-	width: 100%;
+	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,6 +19,7 @@ const IndexPage: React.FC = () => {
 	return (
 		<Fragment>
 			<HeadMolecules />
+			<HeaderMolecules />
 			<Center>
 				<Title type="h1">Site in progress... v{packageJson.version}</Title>
 				<Title type="h2">By Andre Ferreira</Title>

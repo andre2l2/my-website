@@ -1,10 +1,26 @@
 import React from 'react';
-import { LinkType } from './link.type';
+import styled, { css } from 'styled-components';
 
-export const Link: React.FC<LinkType> = ({ children, href, target }) => {
+import { LinkStyledType, LinkType } from './link.type';
+
+const LinkStyled = styled.a<LinkStyledType>`
+	color: black;
+	outline: none;
+	text-decoration: none;
+	padding: 10px;
+
+	${({ size }) =>
+		size === 'lg'
+			? css`
+					font-size: 24px;
+			  `
+			: null}
+`;
+
+export const Link: React.FC<LinkType> = ({ children, href, target, size }) => {
 	return (
-		<a href={href} target={target}>
+		<LinkStyled href={href} target={target} size={size}>
 			{children}
-		</a>
+		</LinkStyled>
 	);
 };
