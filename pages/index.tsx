@@ -9,6 +9,7 @@ import { HeaderMolecules } from '../components/molecules/header/header.molecules
 
 const Center = styled.div`
 	margin-top: 30px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
