@@ -15,11 +15,20 @@ const LinkStyled = styled.a<LinkStyledType>`
 					font-size: 24px;
 			  `
 			: null}
+
+	${({ position }) =>
+		position === 'center'
+			? css`
+					display: flex;
+					align-items: center;
+					justify-content: center;
+			  `
+			: null}
 `;
 
-export const Link: React.FC<LinkType> = ({ children, href, target, size }) => {
+export const Link: React.FC<LinkType> = ({ children, href, target, size, position }) => {
 	return (
-		<LinkStyled href={href} target={target} size={size}>
+		<LinkStyled href={href} target={target} size={size} position={position}>
 			{children}
 		</LinkStyled>
 	);

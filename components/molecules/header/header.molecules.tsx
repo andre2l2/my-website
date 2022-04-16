@@ -35,7 +35,7 @@ export const HeaderMolecules: React.FC = () => {
 					<Link href="#" size="lg">
 						Contato
 					</Link>
-					<Link href="#" size="lg">
+					<Link href="#" size="lg" position="center">
 						<Img src="/images/settings-icon.svg" alt="Icon Settigns" />
 					</Link>
 				</LinksContainer>
