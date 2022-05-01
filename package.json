@@ -13,8 +13,7 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"type-check": "tsc",
-		"prepare": "husky install"
+		"type-check": "tsc"
 	},
 	"dependencies": {
 		"next": "latest",
