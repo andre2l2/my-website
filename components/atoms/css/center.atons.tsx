@@ -11,7 +11,7 @@ const CenterStyle = styled.div<ContainerType>`
 	align-items: center;
 
 	${({ type }) =>
-		type === 'row'
+		type === 'column'
 			? css`
 					flex-direction: column;
 			  `
@@ -19,7 +19,7 @@ const CenterStyle = styled.div<ContainerType>`
 			? css`
 					flex-direction: column;
 
-					@media (min-width: 600px) {
+					@media (min-width: 800px) {
 						flex-direction: row;
 					}
 			  `

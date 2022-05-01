@@ -5,8 +5,12 @@ export const Infos = styled.div`
 	width: 350px;
 	border-radius: 30px;
 
-	@media (min-width: 600px) {
+	@media (min-width: 800px) {
 		width: 800px;
+		height: 80vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 
