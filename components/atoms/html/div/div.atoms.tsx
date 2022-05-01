@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
-export const Div: React.FC = ({ children }) => {
-	return <div>{children}</div>;
+type DivTypes = {
+	style?: CSSProperties;
+};
+
+export const Div: React.FC<DivTypes> = ({ children, style }) => {
+	return <div style={style}>{children}</div>;
 };

@@ -6,6 +6,7 @@ import { Title } from '../components/atoms/html/title/title.atoms';
 import { Link } from '../components/atoms/html/link/link.atoms';
 import { HeadMolecules } from '../components/molecules/head/head.molecules';
 import { HeaderMolecules } from '../components/molecules/header/header.molecules';
+import { MainMolecules } from '../components/molecules/main/main.molecules';
 
 const Center = styled.div`
 	margin-top: 30px;
@@ -21,11 +22,12 @@ const IndexPage: React.FC = () => {
 		<Fragment>
 			<HeadMolecules />
 			<HeaderMolecules />
+			<MainMolecules />
 			<Center>
-				<Title type="h1">Site in progress... v{packageJson.version}</Title>
-				<Title type="h2">By Andre Ferreira</Title>
+				<Title type="h3">Site in progress... v{packageJson.version}</Title>
+				<Title type="h4">By Andre Ferreira</Title>
 				<Link href="https://github.com/andre2l2/my-website" target="_blank">
-					Click here to see Github repository
+					Click here to see on Github repository
 				</Link>
 			</Center>
 		</Fragment>

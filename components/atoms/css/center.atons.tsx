@@ -1,7 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const CenterStyle = styled.div<{ type: 'column' | 'row' }>`
+type ContainerType = {
+	type?: 'column' | 'row' | 'auto';
+};
+
+const CenterStyle = styled.div<ContainerType>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,9 +15,17 @@ const CenterStyle = styled.div<{ type: 'column' | 'row' }>`
 			? css`
 					flex-direction: column;
 			  `
+			: type == 'auto'
+			? css`
+					flex-direction: column;
+
+					@media (min-width: 600px) {
+						flex-direction: row;
+					}
+			  `
 			: null}
 `;
 
-export const Center: React.FC = ({ children }) => {
-	return <CenterStyle type="column">{children}</CenterStyle>;
+export const Center: React.FC<ContainerType> = ({ children, type }) => {
+	return <CenterStyle type={type}>{children}</CenterStyle>;
 };
