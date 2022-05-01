@@ -7,10 +7,6 @@ export const Infos = styled.div`
 
 	@media (min-width: 800px) {
 		width: 800px;
-		height: 80vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 `;
 
