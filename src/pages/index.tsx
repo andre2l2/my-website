@@ -8,13 +8,12 @@ import { FooterMolecules } from '../components/molecules/footer/footer.molecules
 
 const HomePage = styled.section`
 	height: 100vh;
-	width: 100%;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 5px;
 `;
 
 const IndexPage: React.FC = () => {

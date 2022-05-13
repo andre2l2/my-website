@@ -9,6 +9,14 @@ const LinkStyled = styled.a<LinkStyledType>`
 	text-decoration: none;
 	padding: 10px;
 
+	background: linear-gradient(#ffc300 0 0) calc(100% - var(--p, 0%)) / var(--p, 0%) no-repeat;
+	border-radius: 10px;
+	transition: 0.4s, background-position 0s;
+
+	&:hover {
+		--p: 100%;
+	}
+
 	${({ size }) =>
 		size === 'lg'
 			? css`

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import packageJson from '../../../package.json';
+import packageJson from '../../../../package.json';
 import { Title } from '../../atoms';
 import { Center } from '../../atoms/css/center.atons';
 

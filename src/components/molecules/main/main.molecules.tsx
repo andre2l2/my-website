@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Main, Paragraph, Img } from '../../atoms';
-import { Center } from '../../atoms/css/center.atons';
+import { Main, Paragraph, Img, Center } from '../../atoms';
 import { Infos, ProfileContainer, TextContainer } from './containers';
 
 export const MainMolecules: React.FC = () => {

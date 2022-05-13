@@ -8,3 +8,8 @@ export * from './html/paragraph/paragraph.atoms';
 export * from './html/section/section.atoms';
 export * from './html/span/span.atoms';
 export * from './html/title/title.atoms';
+
+export * from './next/head.atom';
+export * from './next/link.atom';
+
+export * from './css/center.atons';
