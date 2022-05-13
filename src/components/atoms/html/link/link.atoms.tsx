@@ -32,11 +32,27 @@ const LinkStyled = styled.a<LinkStyledType>`
 					justify-content: center;
 			  `
 			: null}
+
+	${({ bgColor }) =>
+		bgColor === 'white'
+			? css`
+					background-color: white;
+			  `
+			: null}
+
+	${({ color }) =>
+		color === 'black'
+			? css`
+					color: black;
+			  `
+			: css`
+					color: white;
+			  `}
 `;
 
-export const Link: React.FC<LinkType> = ({ children, href, target, size, position }) => {
+export const Link: React.FC<LinkType> = ({ children, href, target, size, position, bgColor, color }) => {
 	return (
-		<LinkStyled href={href} target={target} size={size} position={position}>
+		<LinkStyled href={href} target={target} size={size} position={position} bgColor={bgColor} color={color}>
 			{children}
 		</LinkStyled>
 	);

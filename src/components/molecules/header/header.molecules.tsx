@@ -19,13 +19,13 @@ export const HeaderMolecules: React.FC = () => {
 	return (
 		<Header>
 			<Container>
-				<Link href="#" size="lg">
+				<Link href="#" size="lg" color="black">
 					Sobre
 				</Link>
-				<Link href="#" size="lg">
+				<Link href="#" size="lg" color="black">
 					Contato
 				</Link>
-				<Link href="#" size="lg" position="center">
+				<Link href="#" size="lg" position="center" color="black">
 					<Img src="/images/settings-icon.svg" alt="Icon Settigns" />
 				</Link>
 			</Container>
