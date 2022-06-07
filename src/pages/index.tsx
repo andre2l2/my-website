@@ -1,30 +1,21 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
-
-import { HeadMolecules } from '../components/molecules/head/head.molecules';
-import { HeaderMolecules } from '../components/molecules/header/header.molecules';
-import { MainMolecules } from '../components/molecules/main/main.molecules';
-import { FooterMolecules } from '../components/molecules/footer/footer.molecules';
-
-const HomePage = styled.section`
-	height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 5px;
-`;
+import * as packageJson from '../../package.json';
 
 const IndexPage: React.FC = () => {
 	return (
 		<Fragment>
-			<HeadMolecules />
-			<HomePage>
-				<HeaderMolecules />
-				<MainMolecules />
-				<FooterMolecules />
-			</HomePage>
+			<div
+				style={{
+					height: '100vh',
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}
+			>
+				<h1>v{packageJson.version}</h1>
+				<h2>Site em andamento</h2>
+			</div>
 		</Fragment>
 	);
 };
