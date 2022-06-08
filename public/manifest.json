@@ -1,7 +1,7 @@
 {
 	"theme_color": "#212529",
 	"background_color": "#212529",
-	"display": "fullscreen",
+	"display": "standalone",
 	"scope": "/",
 	"start_url": "/",
 	"name": "Andre Ferreira",
