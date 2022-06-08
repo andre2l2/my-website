@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import * as packageJson from '../../package.json';
 
 import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 import { ColorDark } from '../css/color.enum';
 
 const index: React.FC = () => {
@@ -34,6 +35,7 @@ const index: React.FC = () => {
 					Site em andamento
 				</h2>
 			</div>
+			<Footer />
 		</Fragment>
 	);
 };
