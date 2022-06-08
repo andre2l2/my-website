@@ -1,6 +1,4 @@
-import { Head } from 'next/document';
 import React, { Fragment } from 'react';
-import * as packageJson from '../../package.json';
 
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
@@ -25,7 +23,7 @@ const index: React.FC = () => {
 						color: ColorDark.WHITE,
 					}}
 				>
-					v{packageJson.version}
+					v0.0.26
 				</h1>
 				<h2
 					style={{
