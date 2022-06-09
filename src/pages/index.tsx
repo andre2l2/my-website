@@ -4,6 +4,8 @@ import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { ColorDark } from '../css/color.enum';
 
+import * as packageJson from '../../package.json';
+
 const index: React.FC = () => {
 	return (
 		<Fragment>
@@ -23,7 +25,7 @@ const index: React.FC = () => {
 						color: ColorDark.WHITE,
 					}}
 				>
-					v0.0.26
+					v{packageJson.version}
 				</h1>
 				<h2
 					style={{
