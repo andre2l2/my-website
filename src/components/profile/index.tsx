@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ColorDark } from '../../css/color.enum';
 
 const Section = styled.section`
+	margin-top: 50px;
 	width: 100%;
 	max-width: 1000px;
 	display: flex;

@@ -4,6 +4,7 @@ import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { Profile } from '@/components/profile';
 import { ColorDark } from '../css/color.enum';
+import { About } from '../components/about';
 
 import * as packageJson from '../../package.json';
 
@@ -13,7 +14,7 @@ const index: React.FC = () => {
 			<Header />
 			<div
 				style={{
-					height: '100vh',
+					minHeight: '100vh',
 					display: 'flex',
 					flexDirection: 'column',
 					justifyContent: 'space-evenly',
@@ -22,6 +23,7 @@ const index: React.FC = () => {
 				}}
 			>
 				<Profile />
+				<About />
 				<h1
 					style={{
 						color: ColorDark.WHITE,
