@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
+import { Profile } from '@/components/profile';
 import { ColorDark } from '../css/color.enum';
 
 import * as packageJson from '../../package.json';
@@ -15,11 +16,12 @@ const index: React.FC = () => {
 					height: '100vh',
 					display: 'flex',
 					flexDirection: 'column',
-					justifyContent: 'center',
+					justifyContent: 'space-evenly',
 					alignItems: 'center',
 					backgroundColor: ColorDark.DARK,
 				}}
 			>
+				<Profile />
 				<h1
 					style={{
 						color: ColorDark.WHITE,
@@ -27,13 +29,6 @@ const index: React.FC = () => {
 				>
 					v{packageJson.version}
 				</h1>
-				<h2
-					style={{
-						color: ColorDark.WHITE,
-					}}
-				>
-					Site em andamento
-				</h2>
 			</div>
 			<Footer />
 		</Fragment>
