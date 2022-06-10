@@ -9,6 +9,7 @@
 		"node": "14",
 		"npm": "8.5.0"
 	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "next",
 		"build": "next build",

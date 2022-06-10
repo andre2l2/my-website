@@ -20,25 +20,31 @@ const DivSection = styled.div`
 	padding: 20px;
 `;
 
+const H2 = styled.h2`
+	color: ${ColorDark.WHITE};
+	margin-bottom: 20px;
+`;
+
 const P = styled.p`
 	text-align: justify;
 	line-height: 23px;
+	color: ${ColorDark.WHITE};
 `;
 
 export const About: React.FC = () => {
 	return (
-		<Section>
+		<Section id="about">
 			<DivSection>
-				<h2 style={{ color: ColorDark.WHITE, marginBottom: 10 }}>Um pouco mais de mim</h2>
-				<P style={{ color: ColorDark.WHITE }}>
+				<H2>Um pouco mais de mim</H2>
+				<P>
 					Me chamo Andre Ferreira, nasci em Alfenas - MG, a terra pão de queijo e do pastel de fubá, mas atualmente,
 					moro no Litoral Norte de São Paulo. Curso Engenharia de Computação e no tempo livre ando de skate, tiro fotos
 					dos lugares onde passo, leio alguns livros, e tenho um bom gosto para música, acredite!
 				</P>
 			</DivSection>
 			<DivSection>
-				<h2 style={{ color: ColorDark.WHITE, marginBottom: 10 }}>Minha jornada</h2>
-				<P style={{ color: ColorDark.WHITE }}>
+				<H2>Minha jornada</H2>
+				<P>
 					Meu primeiro trabalho foi como animador de festa infantil e fiz isso durante todo meu ensino médio. E já fui
 					voluntário da Escola da Família (Programa do governo para crianças carentes) aqui da Cidade onde moro. Quando
 					entrei na faculdade, logo fui atrás de estágio na prefeitura aqui da cidade, ajudava no Arquivo tomando conta

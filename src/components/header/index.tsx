@@ -6,6 +6,7 @@ import { ColorDark } from '../../css/color.enum';
 
 const HeaderContainer = styled.header`
 	width: 100%;
+	background-color: ${ColorDark.SEMI_DARK};
 `;
 
 const DivContainer = styled.div`
@@ -37,11 +38,13 @@ const DivDescktopContainer = styled.div`
 	width: 200px;
 	display: flex;
 	justify-content: space-between;
+`;
 
-	a {
-		font-size: 20px;
-		padding: 5px;
-	}
+const Link = styled.a`
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+	color: ${ColorDark.SUPER_DARK};
 `;
 
 const AsideContainer = styled.aside`
@@ -49,6 +52,7 @@ const AsideContainer = styled.aside`
 	height: 100vh;
 	width: 200px;
 	padding: 20px;
+	background-color: ${ColorDark.SEMI_DARK};
 
 	@media (min-width: 820px) {
 		display: none;
@@ -61,16 +65,25 @@ const DivLinkContainer = styled.div`
 	cursor: pointer;
 `;
 
+const Aside: React.FC = () => {
+	return (
+		<AsideContainer>
+			<DivLinkContainer>
+				<Link href="#about">Sobre</Link>
+			</DivLinkContainer>
+			<DivLinkContainer>
+				<Link href="#social">Contato</Link>
+			</DivLinkContainer>
+		</AsideContainer>
+	);
+};
+
 export const Header: React.FC = () => {
 	const [isOppen, oppen] = useState(false);
 
 	return (
 		<>
-			<HeaderContainer
-				style={{
-					backgroundColor: ColorDark.SEMI_DARK,
-				}}
-			>
+			<HeaderContainer>
 				<DivContainer>
 					<DivMobileContainer>
 						<Image
@@ -84,53 +97,12 @@ export const Header: React.FC = () => {
 					</DivMobileContainer>
 					<Image src="/images/icon.svg" width={40} height={40} />
 					<DivDescktopContainer>
-						<a
-							href="#"
-							style={{
-								color: ColorDark.SUPER_DARK,
-							}}
-						>
-							Sobre
-						</a>
-						<a
-							href="#"
-							style={{
-								color: ColorDark.SUPER_DARK,
-							}}
-						>
-							Contato
-						</a>
+						<Link href="#about">Sobre</Link>
+						<Link href="#social">Contato</Link>
 					</DivDescktopContainer>
 				</DivContainer>
 			</HeaderContainer>
-			{isOppen && (
-				<AsideContainer
-					style={{
-						backgroundColor: ColorDark.SEMI_DARK,
-					}}
-				>
-					<DivLinkContainer>
-						<a
-							href="#"
-							style={{
-								color: ColorDark.SUPER_DARK,
-							}}
-						>
-							Sobre
-						</a>
-					</DivLinkContainer>
-					<DivLinkContainer>
-						<a
-							href="#"
-							style={{
-								color: ColorDark.SUPER_DARK,
-							}}
-						>
-							Contato
-						</a>
-					</DivLinkContainer>
-				</AsideContainer>
-			)}
+			{isOppen && <Aside />}
 		</>
 	);
 };

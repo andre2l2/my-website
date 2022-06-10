@@ -1,9 +1,18 @@
 import React, { Fragment } from 'react';
 
+import { Header } from '../components/header';
+import { Main } from '../components/main';
+import { Footer } from '../components/footer';
+import { NotFoundPage } from '../components/notFound';
+
 const NotFound: React.FC = () => {
 	return (
 		<Fragment>
-			<h1>Page not found</h1>
+			<Header />
+			<Main>
+				<NotFoundPage />
+			</Main>
+			<Footer />
 		</Fragment>
 	);
 };
