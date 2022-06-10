@@ -8,6 +8,10 @@ body {
 	font-family: 'Cabin', sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 a {
 	text-decoration: none;
 }
