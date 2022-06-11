@@ -4,7 +4,7 @@
 		"name": "Andre Ferreira",
 		"email": "delcferreira@gmail.com"
 	},
-	"version": "0.0.34",
+	"version": "0.0.35",
 	"engines": {
 		"node": "14",
 		"npm": "8.5.0"
