@@ -6,7 +6,6 @@ import { Profile } from '@/components/profile';
 import { About } from '@/components/about';
 import { Social } from '@/components/social';
 import { Main } from '@/components/main';
-import { ProgressBar, Skils } from '@/components/progress-bar';
 
 const index: React.FC = () => {
 	return (
