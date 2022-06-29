@@ -4,7 +4,7 @@
   <img src="public/my-website.svg" alt="" />
 </p>
 
-[PT-BR](./docs/pt-br.md)
+[PT-BR 🇧🇷](./docs/pt-br.md)
 
 ## About this project
 
