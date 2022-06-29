@@ -4,4 +4,4 @@
   <img src="public/my-website.svg" alt="" />
 </p>
 
-Link do site: [andreferreira.xyz](andreferreira.xyz)
+Link do site: [andreferreira.xyz](https://andreferreira.xyz)
