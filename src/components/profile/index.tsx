@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { ColorDark } from '../../css/color.enum';
@@ -43,7 +43,8 @@ const H1 = styled.h1`
 `;
 
 export const Profile: React.FC = () => {
-	const [text] = useState([
+	const [text, setText] = useState('Olá! É ótimo em ver você aqui');
+	const [texts] = useState([
 		'Olá! É ótimo em ver você aqui',
 		'Olá! É bom ver você aqui',
 		'Bem vindo ao meu site! :)',
@@ -51,10 +52,17 @@ export const Profile: React.FC = () => {
 		'Programador é a máquina que transforma café em código! ',
 	]);
 
+	useState(() => {
+		setInterval(() => {
+			const actualText = texts[Math.trunc(Math.random() * 5)];
+			setText(actualText);
+		}, 3 * 1000);
+	});
+
 	return (
 		<Section>
 			<Image src="/images/profile.png" />
-			<H1>{text[Math.trunc(Math.random() * 5)]}</H1>
+			<H1>{text}</H1>
 		</Section>
 	);
 };

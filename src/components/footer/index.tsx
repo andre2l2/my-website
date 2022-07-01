@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 import { ColorDark } from '../../css/color.enum';
 import * as packageJson from '../../../package.json';
+
+interface IPackageJson {
+	name: string;
+	email: string;
+	version: string;
+}
 
 const FooterContainer = styled.footer`
 	height: 150px;
@@ -23,13 +29,22 @@ const Infos = styled.div`
 `;
 
 export const Footer: React.FC = () => {
+	const [infos, setInfos] = useState<IPackageJson>({ email: null, name: null, version: null });
+	useEffect(() => {
+		setInfos({
+			name: packageJson.author.name,
+			email: packageJson.author.email,
+			version: packageJson.version,
+		});
+	}, [packageJson]);
+
 	return (
 		<FooterContainer>
 			<DivContainer>
 				<Image src="/images/rocket.svg" width={40} height={40} />
-				<Infos>{packageJson.author.name}</Infos>
-				<Infos>{packageJson.author.email}</Infos>
-				<Infos>v{packageJson.version}</Infos>
+				<Infos>{infos.name}</Infos>
+				<Infos>{infos.email}</Infos>
+				<Infos>v{infos.version}</Infos>
 			</DivContainer>
 		</FooterContainer>
 	);
