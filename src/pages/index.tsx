@@ -6,7 +6,6 @@ import { Profile } from '@/components/profile';
 import { About } from '@/components/about';
 import { Social } from '@/components/social';
 import { Main } from '@/components/main';
-import { Skils } from '@/components/progress-bar';
 
 const index: React.FC = () => {
 	return (
@@ -15,7 +14,6 @@ const index: React.FC = () => {
 			<Main>
 				<Profile />
 				<About />
-				<Skils />
 				<Social />
 			</Main>
 			<Footer />
