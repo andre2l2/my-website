@@ -1,5 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 import styled from 'styled-components';
 
 import { ColorDark } from '../../css/color.enum';
@@ -40,7 +40,7 @@ const Span = styled.span`
 export const Social: React.FC = () => {
 	return (
 		<Section id="social">
-			<H2>Entre em contato</H2>
+			<H2>Outras reders:</H2>
 			<ContainerMain>
 				<ContainerSocial href="https://github.com/andre2l2" target="_blank">
 					<Image src="/images/github.svg" width={60} height={60} />
@@ -52,6 +52,10 @@ export const Social: React.FC = () => {
 				</ContainerSocial>
 				<ContainerSocial href="https://twitter.com/andre_2l2" target="_blank">
 					<Image src="/images/twitter.svg" width={60} height={60} />
+					<Span>andre_2l2</Span>
+				</ContainerSocial>
+				<ContainerSocial href="https://unsplash.com/@andre_2l2" target="_blank">
+					<Image src="/images/unsplash.svg" width={60} height={60} />
 					<Span>andre_2l2</Span>
 				</ContainerSocial>
 			</ContainerMain>
