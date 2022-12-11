@@ -1,69 +1,15 @@
-import React, { useState } from 'react';
 import Image from 'next/image';
-import styled from 'styled-components';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
-import { ColorDark } from '../../css/color.enum';
-
-const HeaderContainer = styled.header`
-	width: 100%;
-	background-color: ${ColorDark.SEMI_DARK};
-`;
-
-const DivContainer = styled.div`
-	height: 50;
-	width: 90%;
-	max-width: 1000px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
-`;
-
-const DivMobileContainer = styled.div`
-	@media (min-width: 820px) {
-		display: none;
-	}
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-`;
-
-const DivDescktopContainer = styled.div`
-	@media (max-width: 820px) {
-		display: none;
-	}
-
-	width: 200px;
-	display: flex;
-	justify-content: space-between;
-`;
-
-const Link = styled.a`
-	font-size: 20px;
-	padding: 5px;
-	cursor: pointer;
-	color: ${ColorDark.SUPER_DARK};
-`;
-
-const AsideContainer = styled.aside`
-	position: absolute;
-	height: 100vh;
-	width: 200px;
-	padding: 20px;
-	background-color: ${ColorDark.SEMI_DARK};
-
-	@media (min-width: 820px) {
-		display: none;
-	}
-`;
-
-const DivLinkContainer = styled.div`
-	padding: 8px;
-	font-size: 20px;
-	cursor: pointer;
-`;
+import {
+	AsideContainer,
+	DivContainer,
+	DivDescktopContainer,
+	DivLinkContainer,
+	DivMobileContainer,
+	HeaderContainer,
+} from './style';
 
 const Aside: React.FC = () => {
 	return (
