@@ -1,28 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react';
 
-import {
-	AsideContainer,
-	DivContainer,
-	DivDescktopContainer,
-	DivLinkContainer,
-	DivMobileContainer,
-	HeaderContainer,
-} from './style';
+import { Aside } from '@/components/aside';
 
-const Aside: React.FC = () => {
-	return (
-		<AsideContainer>
-			<DivLinkContainer>
-				<Link href="#about">Sobre</Link>
-			</DivLinkContainer>
-			<DivLinkContainer>
-				<Link href="#social">Contato</Link>
-			</DivLinkContainer>
-		</AsideContainer>
-	);
-};
+import { DivContainer, DivDescktopContainer, DivMobileContainer, HeaderContainer, Link } from './style';
 
 export const Header: React.FC = () => {
 	const [isOppen, oppen] = useState(false);

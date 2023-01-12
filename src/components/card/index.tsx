@@ -22,7 +22,7 @@ export const Card: React.FC = () => {
 		{
 			imageUrl: 'https://github.com/andre2l2/CalculatorWeb/raw/master/img/demo.gif',
 			link: 'https://github.com/andre2l2/CalculatorWeb',
-			name: 'Contact Us - Website',
+			name: 'Web Calculator - Website',
 		},
 		{
 			imageUrl: 'https://github.com/andre2l2/colors/raw/master/img/demo.gif',
