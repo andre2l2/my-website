@@ -41,8 +41,8 @@ export const CardContainer = styled.a`
 	display: block;
 	margin: 10px auto;
 	cursor: pointer;
-`;
 
-export const Image = styled.img`
-	border-radius: 10px;
+	img {
+		border-radius: 10px;
+	}
 `;

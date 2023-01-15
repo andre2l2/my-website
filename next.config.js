@@ -2,6 +2,9 @@ const withPWA = require('next-pwa');
 
 module.exports = withPWA({
 	reactStrictMode: false,
+	images: {
+		domains: ['github.com'],
+	},
 	pwa: {
 		dest: 'public',
 		register: true,

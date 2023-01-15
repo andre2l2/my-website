@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { CardContainer, Center, H2, Image, P, Section } from './style';
+import { CardContainer, Center, H2, P, Section } from './style';
 
 export const Card: React.FC = () => {
 	const [cardInfos] = useState([
