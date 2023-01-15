@@ -1,32 +1,33 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { CardContainer, Center, H2, P, Section } from './style';
+import { Title } from '@/components/atoms/title';
+import { CardContainer, Center, P, Section } from './style';
 
 export const Card: React.FC = () => {
 	const [cardInfos] = useState([
 		{
-			imageUrl: 'https://github.com/andre2l2/travel-world/raw/master/images/demo.gif',
+			imageUrl: '/images/card/travel-world-demo.gif',
 			link: 'https://github.com/andre2l2/travel-world',
 			name: 'Travel World - Website',
 		},
 		{
-			imageUrl: 'https://github.com/andre2l2/mntn/raw/master/public/example-2.gif',
+			imageUrl: '/images/card/mntn-demo.gif',
 			link: 'https://github.com/andre2l2/mntn',
 			name: 'MNTN - Website',
 		},
 		{
-			imageUrl: 'https://github.com/andre2l2/contact-us/raw/master/public/demo.png',
+			imageUrl: '/images/card/contact-us-demo.png',
 			link: 'https://github.com/andre2l2/contact-us',
 			name: 'Contact Us - Website',
 		},
 		{
-			imageUrl: 'https://github.com/andre2l2/CalculatorWeb/raw/master/img/demo.gif',
+			imageUrl: '/images/card/calculator-web-demo.gif',
 			link: 'https://github.com/andre2l2/CalculatorWeb',
 			name: 'Web Calculator - Website',
 		},
 		{
-			imageUrl: 'https://github.com/andre2l2/colors/raw/master/img/demo.gif',
+			imageUrl: '/images/card/colors-demo.gif',
 			link: 'https://github.com/andre2l2/colors',
 			name: 'Color-Efect - Tutorial',
 		},
@@ -34,7 +35,7 @@ export const Card: React.FC = () => {
 
 	return (
 		<Section>
-			<H2>Meu Trabalho</H2>
+			<Title type="h2">Meu Trabalho</Title>
 			<Center>
 				{cardInfos.map((info) => (
 					<CardContainer href={info.link} target="_blank">

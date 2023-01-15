@@ -13,10 +13,6 @@ export const NotFoundCode = styled.div`
 	color: ${ColorDark.WHITE};
 `;
 
-export const H1 = styled.h1`
-	color: ${ColorDark.WHITE};
-`;
-
 export const Link = styled.a`
 	width: 140px;
 	border-radius: 10px;

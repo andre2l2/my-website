@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { H1, Image, Section } from './style';
+import { Title } from '@/components/atoms/title';
+import { Image, Section } from './style';
 
 export const Profile: React.FC = () => {
 	return (
 		<Section>
 			<Image src="/images/profile.png" />
-			<H1>Olá! É ótimo em ver você aqui</H1>
+			<Title type="h1">Olá! É ótimo em ver você aqui</Title>
 		</Section>
 	);
 };

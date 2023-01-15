@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import { Aside } from '@/components/aside';
-
 import { DivContainer, DivDescktopContainer, DivMobileContainer, HeaderContainer, Link } from './style';
 
 export const Header: React.FC = () => {

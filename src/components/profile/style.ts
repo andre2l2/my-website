@@ -1,4 +1,3 @@
-import { ColorDark } from '@/infra/utils/color.enum';
 import styled from 'styled-components';
 
 export const Section = styled.section`
@@ -27,15 +26,5 @@ export const Image = styled.img`
 	@media (min-width: 820px) {
 		width: 300px;
 		height: 300px;
-	}
-`;
-
-export const H1 = styled.h1`
-	width: 200px;
-	text-align: center;
-	color: ${ColorDark.WHITE};
-
-	@media (min-width: 820px) {
-		width: 400px;
 	}
 `;

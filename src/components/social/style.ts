@@ -7,12 +7,6 @@ export const Section = styled.section`
 	margin: 40px 0 40px 0;
 `;
 
-export const H2 = styled.h2`
-	margin-left: 20px;
-	margin-bottom: 20px;
-	color: ${ColorDark.WHITE};
-`;
-
 export const ContainerMain = styled.div`
 	@media (min-width: 820px) {
 		display: flex;

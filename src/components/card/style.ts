@@ -25,12 +25,6 @@ export const Center = styled.section`
 	}
 `;
 
-export const H2 = styled.h2`
-	margin-left: 20px;
-	margin-bottom: 20px;
-	color: ${ColorDark.WHITE};
-`;
-
 export const P = styled.p`
 	font-size: 15px;
 	margin-top: 4px;

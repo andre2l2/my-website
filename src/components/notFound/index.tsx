@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { H1, NotFoundCode, Section } from './style';
+import { Title } from '@/components/atoms/title';
+
+import { NotFoundCode, Section } from './style';
 
 export const NotFoundPage: React.FC = () => {
 	return (
 		<Section>
 			<NotFoundCode>404</NotFoundCode>
-			<H1>Pagina não encontrada</H1>
+			<Title type="h1">Pagina não encontrada</Title>
 			<Link href="/">Voltar</Link>
 		</Section>
 	);

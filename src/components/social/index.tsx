@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { ContainerMain, ContainerSocial, H2, Section, Span } from './style';
+import { Title } from '@/components/atoms/title';
+import { ContainerMain, ContainerSocial, Section, Span } from './style';
 
 export const Social: React.FC = () => {
 	const [medias] = useState([
@@ -29,7 +30,7 @@ export const Social: React.FC = () => {
 
 	return (
 		<Section id="social">
-			<H2>Outras reders:</H2>
+			<Title type="h2">Outras reders:</Title>
 			<ContainerMain>
 				{medias.map(({ name, imageUrl, link }, index) => (
 					<ContainerSocial href={link} target="_blank" key={index}>
