@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ColorDark } from '@/infra/utils/color.enum';
 
 export const Section = styled.section`
-	margin-top: 80px;
+	margin-top: 40px;
 	width: 100%;
 	max-width: 1000px;
 	display: grid;
@@ -11,6 +11,7 @@ export const Section = styled.section`
 
 	@media (min-width: 820px) {
 		grid-template-columns: 1fr 1fr;
+		margin-top: 0px;
 	}
 `;
 

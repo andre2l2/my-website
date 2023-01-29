@@ -4,6 +4,10 @@ import React, { useState } from 'react';
 import { Title } from '@/components/atoms/title';
 import { CardContainer, Center, P, Section } from './style';
 
+const myLoader = ({ src, width, quality }) => {
+	return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+};
+
 export const Card: React.FC = () => {
 	const [cardInfos] = useState([
 		{
@@ -39,7 +43,7 @@ export const Card: React.FC = () => {
 			<Center>
 				{cardInfos.map((info) => (
 					<CardContainer href={info.link} target="_blank">
-						<Image src={info.imageUrl} alt={info.name} width={298} height={170} />
+						<Image src={info.imageUrl} alt={info.name} width={298} height={170} onLoad={() => <div>Loading</div>} />
 						<P>{info.name}</P>
 					</CardContainer>
 				))}

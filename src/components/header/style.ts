@@ -36,6 +36,28 @@ export const DivDescktopContainer = styled.div`
 	width: 200px;
 	display: flex;
 	justify-content: space-between;
+
+	a {
+		position: relative;
+
+		&::after {
+			background-color: ${ColorDark.DARK};
+			position: absolute;
+
+			bottom: 0;
+			left: 0;
+			content: '';
+
+			height: 4px;
+			width: 0%;
+			border-radius: 20px;
+			transition: 0.3s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
 `;
 
 export const Link = styled.a`
