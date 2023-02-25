@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import React from 'react';
 
 import { Title } from '@/components/atoms/title';
 
-import { NotFoundCode, Section } from './style';
+import { Link, NotFoundCode, Section } from './style';
 
 export const NotFoundPage: React.FC = () => {
 	return (
