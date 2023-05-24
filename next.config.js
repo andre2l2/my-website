@@ -4,4 +4,7 @@ module.exports = {
 	images: {
 		domains: ['github.com'],
 	},
+	compiler: {
+		styledComponents: true,
+	},
 };
