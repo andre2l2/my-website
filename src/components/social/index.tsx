@@ -34,7 +34,7 @@ export const Social: React.FC = () => {
 			<ContainerMain>
 				{medias.map(({ name, imageUrl, link }, index) => (
 					<ContainerSocial href={link} target="_blank" key={index}>
-						<Image src={imageUrl} width={60} height={60} />
+						<Image src={imageUrl} width={60} height={60} alt="image" />
 						<Span>{name}</Span>
 					</ContainerSocial>
 				))}

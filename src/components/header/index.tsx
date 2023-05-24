@@ -16,12 +16,13 @@ export const Header: React.FC = () => {
 							src="/images/hamburger.svg"
 							width={30}
 							height={30}
+							alt="humburger icon"
 							onClick={() => {
 								isOppen ? oppen(false) : oppen(true);
 							}}
 						/>
 					</DivMobileContainer>
-					<Image src="/images/icon.svg" width={40} height={40} />
+					<Image src="/images/icon.svg" width={40} height={40} alt="here.svg" />
 					<DivDescktopContainer>
 						<Link href="#about">Sobre</Link>
 						<Link href="#social">Contato</Link>
