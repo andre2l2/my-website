@@ -17,11 +17,6 @@ export const Social: React.FC = () => {
 			imageUrl: '/images/linkedin.svg',
 		},
 		{
-			link: 'https://twitter.com/andre_2l2',
-			name: 'andre_2l2',
-			imageUrl: '/images/twitter.svg',
-		},
-		{
 			link: 'https://unsplash.com/@andre_2l2',
 			name: 'andre_2l2',
 			imageUrl: '/images/unsplash.svg',
