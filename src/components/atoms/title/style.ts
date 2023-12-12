@@ -1,11 +1,13 @@
 import styled, { css } from 'styled-components';
 
 import { ColorDark } from '@/infra/utils/color.enum';
+import React from 'react';
 
 export type TitleType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 
 export interface TitleProps {
 	type: TitleType;
+	children: React.ReactNode;
 }
 
 export const TitleStyle = styled.h1<TitleProps>`

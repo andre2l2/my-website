@@ -2,6 +2,10 @@ import React from 'react';
 
 import { MainContainer } from './style';
 
-export const Main: React.FC = ({ children }) => {
+type MainProps = {
+	children: React.ReactNode;
+};
+
+export const Main: React.FC<MainProps> = ({ children }) => {
 	return <MainContainer>{children}</MainContainer>;
 };
