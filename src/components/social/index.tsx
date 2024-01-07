@@ -8,17 +8,22 @@ export const Social: React.FC = () => {
 	const [medias] = useState([
 		{
 			link: 'https://github.com/andre2l2',
-			name: 'andre2l2',
+			name: 'Github',
+			imageUrl: '/images/github.svg',
+		},
+		{
+			link: 'https://medium.com/@andre-ferreira',
+			name: 'Medium',
 			imageUrl: '/images/github.svg',
 		},
 		{
 			link: 'https://www.linkedin.com/in/andre-ferreira-37180318b/',
-			name: 'Andre Ferreira',
+			name: 'Linkedin',
 			imageUrl: '/images/linkedin.svg',
 		},
 		{
 			link: 'https://unsplash.com/@andre_2l2',
-			name: 'andre_2l2',
+			name: 'Unsplash',
 			imageUrl: '/images/unsplash.svg',
 		},
 	]);
