@@ -14,7 +14,7 @@ export const Social: React.FC = () => {
 		{
 			link: 'https://medium.com/@andre-ferreira',
 			name: 'Medium',
-			imageUrl: '/images/github.svg',
+			imageUrl: '/images/medium.svg',
 		},
 		{
 			link: 'https://www.linkedin.com/in/andre-ferreira-37180318b/',
