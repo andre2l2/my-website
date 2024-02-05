@@ -12,11 +12,6 @@ export const Social: React.FC = () => {
 			imageUrl: '/images/github.svg',
 		},
 		{
-			link: 'https://medium.com/@andre-ferreira',
-			name: 'Medium',
-			imageUrl: '/images/medium.svg',
-		},
-		{
 			link: 'https://www.linkedin.com/in/andre-ferreira-37180318b/',
 			name: 'Linkedin',
 			imageUrl: '/images/linkedin.svg',
@@ -25,6 +20,11 @@ export const Social: React.FC = () => {
 			link: 'https://unsplash.com/@andre_2l2',
 			name: 'Unsplash',
 			imageUrl: '/images/unsplash.svg',
+		},
+		{
+			link: 'https://medium.com/@andre-ferreira',
+			name: 'Medium',
+			imageUrl: '/images/medium.svg',
 		},
 	]);
 
