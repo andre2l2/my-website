@@ -1,6 +1,10 @@
 import { ColorDark } from '@/infra/utils/color.enum';
 import styled from 'styled-components';
 
+export type SocialProps = {
+	showTitle?: boolean;
+};
+
 export const Section = styled.section`
 	width: 100%;
 	max-width: 1000px;

@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import { Title } from '@/components/atoms/title';
-import { ContainerMain, ContainerSocial, Section, Span } from './style';
+import { ContainerMain, ContainerSocial, Section, SocialProps, Span } from './style';
 
-export const Social: React.FC = () => {
+export const Social: React.FC<SocialProps> = ({ showTitle = true }) => {
 	const [medias] = useState([
 		{
 			link: 'https://github.com/andre2l2',
@@ -30,7 +30,7 @@ export const Social: React.FC = () => {
 
 	return (
 		<Section id="social">
-			<Title type="h2">Outras reders:</Title>
+			{showTitle && <Title type="h2">Outras reders:</Title>}
 			<ContainerMain>
 				{medias.map(({ name, imageUrl, link }, index) => (
 					<ContainerSocial href={link} target="_blank" key={index}>
