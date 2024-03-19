@@ -4,10 +4,6 @@ import React, { useState } from 'react';
 import { Title } from '@/components/atoms/title';
 import { CardContainer, Center, P, Section } from './style';
 
-const myLoader = ({ src, width, quality }) => {
-	return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-};
-
 export const Card: React.FC = () => {
 	const [cardInfos] = useState([
 		{
