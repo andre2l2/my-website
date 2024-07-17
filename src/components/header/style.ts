@@ -18,19 +18,9 @@ export const DivContainer = styled.div`
 	padding: 10px;
 `;
 
-export const DivMobileContainer = styled.div`
-	@media (min-width: 820px) {
-		display: none;
-	}
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-`;
-
 export const DivDescktopContainer = styled.div`
 	@media (max-width: 820px) {
-		display: none;
+		width: 150px;
 	}
 
 	width: 200px;

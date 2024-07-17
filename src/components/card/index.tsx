@@ -9,17 +9,17 @@ export const Card: React.FC = () => {
 		{
 			imageUrl: '/images/card/travel-world-demo.gif',
 			link: 'https://github.com/andre2l2/travel-world',
-			name: 'Travel World - Website',
+			name: 'Travel world website',
 		},
 		{
 			imageUrl: '/images/card/mntn-demo.gif',
 			link: 'https://github.com/andre2l2/mntn',
-			name: 'MNTN - Website',
+			name: 'MNTN website',
 		},
 		{
 			imageUrl: '/images/card/contact-us-demo.png',
 			link: 'https://github.com/andre2l2/contact-us',
-			name: 'Contact Us - Website',
+			name: 'Contact us website',
 		},
 		{
 			imageUrl: '/images/card/calculator-web-demo.gif',
@@ -29,7 +29,12 @@ export const Card: React.FC = () => {
 		{
 			imageUrl: '/images/card/colors-demo.gif',
 			link: 'https://github.com/andre2l2/colors',
-			name: 'Color-Efect - Tutorial',
+			name: 'Color efect tutorial',
+		},
+		{
+			imageUrl: 'https://github.com/andre2l2/upload-file-example/raw/master/public/img/demo.gif',
+			link: 'https://github.com/andre2l2/upload-file-example?tab=readme-ov-file',
+			name: 'Uplaod file example',
 		},
 	]);
 
