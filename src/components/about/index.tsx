@@ -13,8 +13,8 @@ type AboutPops = {
 export const About: React.FC<AboutPops> = ({ items }) => {
 	return (
 		<Section id="about">
-			{items.map((item) => (
-				<DivSection>
+			{items.map((item, index) => (
+				<DivSection key={index}>
 					<H2>{item.title}</H2>
 					<P>{item.details}</P>
 				</DivSection>

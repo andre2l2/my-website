@@ -44,7 +44,14 @@ export const Card: React.FC = () => {
 			<Center>
 				{cardInfos.map((info, index) => (
 					<CardContainer href={info.link} key={index} target="_blank">
-						<Image src={info.imageUrl} alt={info.name} width={298} height={170} onLoad={() => <div>Loading</div>} />
+						<Image
+							src={info.imageUrl}
+							alt={info.name}
+							width={298}
+							height={170}
+							onLoad={() => <div>Loading</div>}
+							unoptimized
+						/>
 						<P>{info.name}</P>
 					</CardContainer>
 				))}
