@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { DM_Sans, Instrument_Serif } from 'next/font/google';
+import type { ReactNode } from 'react';
 
 import { jsonLd, site } from '@/lib/site';
 
@@ -59,7 +60,7 @@ export const viewport: Viewport = {
 	initialScale: 1,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="pt-BR" className={`${sans.variable} ${serif.variable}`}>
 			<body className="w-full max-w-full overflow-x-hidden font-sans antialiased">

@@ -1,7 +1,8 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { useActionState } from 'react';
 
+import { sendContact, type ContactState } from '@/app/contact-action';
 import { site } from '@/lib/site';
 
 const needs = [
@@ -11,50 +12,12 @@ const needs = [
 	{ value: 'conversar', label: 'Ainda não sei — quero conversar' },
 ] as const;
 
-type Status = 'idle' | 'sending' | 'sent' | 'error';
+const initialState: ContactState = { status: 'idle' };
 
 export function ContactForm() {
-	const [status, setStatus] = useState<Status>('idle');
+	const [state, action, pending] = useActionState(sendContact, initialState);
 
-	async function onSubmit(event: FormEvent<HTMLFormElement>) {
-		event.preventDefault();
-		const form = event.currentTarget;
-		const data = new FormData(form);
-		const name = String(data.get('name') ?? '').trim();
-		const email = String(data.get('email') ?? '').trim();
-		const need = needs.find((item) => item.value === data.get('need'))?.label ?? '';
-		const message = String(data.get('message') ?? '').trim();
-
-		setStatus('sending');
-
-		try {
-			const response = await fetch(site.formspree, {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					name,
-					email,
-					need,
-					message,
-					_subject: `Contato pelo site — ${name}`,
-				}),
-			});
-
-			if (!response.ok) {
-				throw new Error('formspree');
-			}
-
-			form.reset();
-			setStatus('sent');
-		} catch {
-			setStatus('error');
-		}
-	}
-
-	if (status === 'sent') {
+	if (state.status === 'sent') {
 		return (
 			<div className="rounded-2xl border border-line bg-panel p-8">
 				<p className="font-serif text-2xl text-fog">Mensagem enviada.</p>
@@ -65,26 +28,19 @@ export function ContactForm() {
 					</a>
 					.
 				</p>
-				<button
-					type="button"
-					className="mt-6 text-sm text-fog underline-offset-4 hover:underline"
-					onClick={() => setStatus('idle')}
-				>
-					Enviar outra mensagem
-				</button>
 			</div>
 		);
 	}
 
 	return (
-		<form onSubmit={onSubmit} className="grid min-w-0 gap-4 rounded-2xl border border-line bg-panel p-6 md:p-8">
+		<form action={action} className="grid min-w-0 gap-4 rounded-2xl border border-line bg-panel p-6 md:p-8">
 			<label className="grid min-w-0 gap-2 text-sm">
 				<span className="text-mist">Nome</span>
 				<input
 					name="name"
 					required
 					autoComplete="name"
-					disabled={status === 'sending'}
+					disabled={pending}
 					className="w-full min-w-0 max-w-full rounded-xl border border-line bg-ink px-4 py-3 text-fog outline-none focus:border-signal disabled:opacity-60"
 				/>
 			</label>
@@ -95,7 +51,7 @@ export function ContactForm() {
 					type="email"
 					required
 					autoComplete="email"
-					disabled={status === 'sending'}
+					disabled={pending}
 					className="w-full min-w-0 max-w-full rounded-xl border border-line bg-ink px-4 py-3 text-fog outline-none focus:border-signal disabled:opacity-60"
 				/>
 			</label>
@@ -105,7 +61,7 @@ export function ContactForm() {
 					name="need"
 					required
 					defaultValue=""
-					disabled={status === 'sending'}
+					disabled={pending}
 					className="w-full min-w-0 max-w-full rounded-xl border border-line bg-ink px-4 py-3 text-fog outline-none focus:border-signal disabled:opacity-60"
 				>
 					<option value="" disabled>
@@ -125,11 +81,11 @@ export function ContactForm() {
 					required
 					rows={5}
 					placeholder="Conte um pouco do sistema ou da ideia."
-					disabled={status === 'sending'}
+					disabled={pending}
 					className="w-full min-w-0 max-w-full resize-y rounded-xl border border-line bg-ink px-4 py-3 text-fog outline-none placeholder:text-mist/60 focus:border-signal disabled:opacity-60"
 				/>
 			</label>
-			{status === 'error' && (
+			{state.status === 'error' && (
 				<p className="text-sm text-red-300">
 					Não deu para enviar agora. Tente de novo ou escreva para{' '}
 					<a className="underline underline-offset-4" href={`mailto:${site.email}`}>
@@ -140,10 +96,10 @@ export function ContactForm() {
 			)}
 			<button
 				type="submit"
-				disabled={status === 'sending'}
+				disabled={pending}
 				className="mt-2 rounded-full bg-signal px-6 py-3 text-sm font-medium text-signal-ink transition hover:brightness-110 disabled:opacity-60"
 			>
-				{status === 'sending' ? 'Enviando…' : 'Enviar mensagem'}
+				{pending ? 'Enviando…' : 'Enviar mensagem'}
 			</button>
 		</form>
 	);
