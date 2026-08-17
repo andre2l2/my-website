@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+	--font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+	--color-ink: #08090c;
+	--color-panel: #101218;
+	--color-fog: #ecece8;
+	--color-mist: #9b9d98;
+	--color-line: #22262e;
+	--color-signal: #d1f56e;
+	--color-signal-ink: #14180a;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	background: var(--color-ink);
+	color: var(--color-fog);
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+}
+
+::selection {
+	background: var(--color-signal);
+	color: var(--color-signal-ink);
+}
