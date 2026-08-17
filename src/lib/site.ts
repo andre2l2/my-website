@@ -47,7 +47,7 @@ export const jsonLd = {
 			name: site.name,
 			jobTitle: 'Engenheiro de Software',
 			description: site.description,
-			image: `${site.url}/images/profile.png`,
+			image: `${site.url}/images/profile.jpeg`,
 			knowsAbout: ['Node.js', 'TypeScript', 'NestJS', 'Next.js', 'Go', 'Elixir', 'Desenvolvimento de sistemas', 'Manutenção de sistemas'],
 			url: site.url,
 			email: site.email,

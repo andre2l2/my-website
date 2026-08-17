@@ -37,7 +37,7 @@ export function Hero() {
 				<div className="mx-auto w-full min-w-0 max-w-xs sm:max-w-sm lg:max-w-md">
 					<div className="relative aspect-square overflow-hidden rounded-full ring-2 ring-signal/40 ring-offset-4 ring-offset-ink sm:ring-offset-8">
 						<Image
-							src="/images/profile.png"
+							src="/images/profile.jpeg"
 							alt="André Ferreira, engenheiro de software"
 							fill
 							priority
