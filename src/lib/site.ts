@@ -2,6 +2,7 @@ export const site = {
 	name: 'André Ferreira',
 	url: 'https://andreferreira.xyz',
 	email: 'delcferreira@gmail.com',
+	formspree: 'https://formspree.io/f/moeakzbq',
 	locale: 'pt_BR',
 	title: 'André Ferreira | Desenvolvimento e manutenção de sistemas',
 	description:
